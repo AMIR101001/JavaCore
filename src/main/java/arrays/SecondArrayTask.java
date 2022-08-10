@@ -1,3 +1,5 @@
+package arrays;
+
 public class SecondArrayTask {
     public static int fullSize(int[] firstArray, int[] secondArray) {
         int count_arr = 0;

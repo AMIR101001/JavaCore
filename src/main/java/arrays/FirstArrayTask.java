@@ -1,3 +1,5 @@
+package arrays;
+
 public class FirstArrayTask {
 
     public static int getCountEvenNumbers(int[] array) {

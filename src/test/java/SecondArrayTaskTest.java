@@ -1,5 +1,4 @@
-import static org.junit.Assert.*;
-
+import arrays.SecondArrayTask;
 import org.junit.Assert;
 import org.junit.Test;
 
