@@ -1,3 +1,4 @@
+package arrays;
 
 import arrays.FirstArrayTask;
 import org.junit.Assert;

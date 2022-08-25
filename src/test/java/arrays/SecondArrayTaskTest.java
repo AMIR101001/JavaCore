@@ -1,3 +1,5 @@
+package arrays;
+
 import arrays.SecondArrayTask;
 import org.junit.Assert;
 import org.junit.Test;

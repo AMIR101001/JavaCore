@@ -9,14 +9,14 @@ public class AutoService {
     public Auto[] getOnlyBmwCars(Auto[] autos) {
         int count = 0;
         for(Auto auto : autos){
-            if(auto.getModel().equals("BMW")){
+            if(auto.getBrand().equals("BMW")){
                 count++;
             }
         }
         Auto[] desired_auto = new Auto[count];
         count = 0;
         for(int i = 0; i < autos.length; i++){
-            if(autos[i].getModel().equals("BMW")){
+            if(autos[i].getBrand().equals("BMW")){
                 desired_auto[count] = autos[i];
                 count++;
             }
@@ -56,19 +56,24 @@ public class AutoService {
     public Auto[] getOnlyAutomaticTypeCars(Auto[] autos) {
         int count = 0;
         for(Auto auto : autos){
-            if(auto.getModel().equals("avto")){
+            if(auto.getTransmission().equals("avto")){
                 count++;
             }
         }
         Auto[] desired_auto = new Auto[count];
         count = 0;
         for(int i = 0; i < autos.length; i++){
-            if(autos[i].getModel().equals("avto")){
+            if(autos[i].getTransmission().equals("avto")){
                 desired_auto[count] = autos[i];
                 count++;
             }
         }
         return desired_auto;
+    }
+
+    @Override
+    public String toString() {
+        return "AutoService{}";
     }
     /*-----------------------------------------------------------------------------------------------------
     _______________________________________________________________________________________________________*/

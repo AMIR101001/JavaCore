@@ -7,11 +7,11 @@ public class Auto {
     private int passengers = 0;
     private String Transmission;
 
-    public Auto(String marc, String model, int passengers, String transmission) {
+    public Auto(String model, String brand, int passengers, String transmission) {
         this.model = model;
         this.brand = brand;
         this.passengers = passengers;
-        Transmission = transmission;
+        this.Transmission = transmission;
     }
 
     public Auto() {
