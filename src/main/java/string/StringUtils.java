@@ -9,7 +9,7 @@ public class StringUtils {
      */
     public static BigString getTheBiggestStringFromArray(String[] strings) {
         int lenght = 0;
-        String line = null;
+        String line = " ";
         BigString bigString = null;
         for (String string : strings) {
             if (lenght < string.length()) {

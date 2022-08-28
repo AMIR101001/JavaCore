@@ -1,17 +1,17 @@
 package zoo;
 
+import junit.framework.TestCase;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ZooTest {
+public class ZooServiceTest{
     @Test
-    public void averageCost() {
+    public void moreAnimal(){
         Zoo kazan = new Zoo(
                 2150,
                 "kazan",
                 new Animal[]{
                         new Animal("жираф"),
-                        new Animal("ферблюд"),
                         new Animal("слон"),
                         new Animal("цапля"),
                         new Animal("осел")
@@ -39,14 +39,42 @@ public class ZooTest {
                         new Animal("жираф"),
                         new Animal("ферблюд"),
                         new Animal("слон"),
+                        new Animal("жираф"),
+                        new Animal("ферблюд"),
+                        new Animal("слон"),
+                        new Animal("цапля"),
                         new Animal("цапля"),
                         new Animal("осел")
                 }
 
         );
 
-        Zoo[] zoos = {kazan, moskow, samara};
-        double average_money = Zoo.averageCost();
-        Assert.assertEquals(average_money, 716.66, 0.01);
+        Zoo ufa = new Zoo(
+                2150,
+                "ufa",
+                new Animal[]{
+                        new Animal("жираф"),
+                        new Animal("ферблюд"),
+                        new Animal("слон"),
+                        new Animal("осел")
+                }
+
+        );
+
+        Zoo piter = new Zoo(
+                2150,
+                "piter",
+                new Animal[]{
+                        new Animal("жираф"),
+                        new Animal("осел")
+                }
+
+        );
+
+        Zoo[] zoos = {kazan, moskow, samara, ufa, piter};
+        ZooService test = new ZooService();
+        Zoo expectedZoo = test.moreAnimal(zoos);
+        Assert.assertEquals(expectedZoo.toString(), "Zoo{name='samara'}");
     }
+
 }

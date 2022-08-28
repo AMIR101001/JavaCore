@@ -1,35 +1,26 @@
 package zoo;
 
 public class Zoo {
-   private static double price = 0;
+   private static double totalPrice = 0;
+   private double price = 0;
    private String name;
    private static int counter = 0;
    private Animal[] animals;
-   private static int animals_counter = 0;
-   private static Zoo more_animals = null;
 
    public Zoo(double price, String name, Animal[] animals) {
+      this.totalPrice = price;
       this.price = price;
       this.name = name;
       this.animals = animals;
       counter++;
-      if(animals_counter < animals.length){
-         animals_counter = animals.length;
-         more_animals = this;
-      }
-   }
-   public static double average_cost(){
-      double all_cost =+ price;
-      return all_cost / counter;
-
    }
 
-   public static Zoo get_more_animals(){
-      return more_animals;
+   public static double averageCost(){
+      return totalPrice / counter;
    }
 
-   public double getPrice() {
-      return price;
+   public double getTotalPrice() {
+      return totalPrice;
    }
 
    public Animal[] getAnimals() {

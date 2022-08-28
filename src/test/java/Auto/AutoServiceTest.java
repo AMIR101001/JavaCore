@@ -26,7 +26,6 @@ public class AutoServiceTest {
         Auto[] result_array = autoService.getOnlyBmwCars(autos);
 
         String auto_model = bmv.getBrand();
-        System.out.println(result_array.length);
 
        Assert.assertEquals(auto_model, result_array[0].getBrand());
 
@@ -45,7 +44,6 @@ public class AutoServiceTest {
         AutoService autoService = new AutoService();
 
         Auto[] result_array = autoService.getSportCars(autos);
-        System.out.println(result_array.length);
         Assert.assertEquals(2, result_array[0].getPassengers());
     }
     @Test
@@ -61,7 +59,6 @@ public class AutoServiceTest {
         AutoService autoService = new AutoService();
 
         Auto[] result_array = autoService.getOnlyAutomaticTypeCars(autos);
-        System.out.println(result_array.length);
         Assert.assertEquals("avto", result_array[0].getTransmission());
     }
 
