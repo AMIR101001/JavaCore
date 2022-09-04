@@ -12,4 +12,14 @@ public class ZooService {
         }
         return moreAnimals;
     }
+
+    public double averagePrice (Zoo[] zoos){
+        int counterZoo = 0;
+        double sum = 0;
+        for(Zoo zoo : zoos){
+            sum =+ zoo.getPrice();
+            counterZoo++;
+        }
+        return sum / counterZoo;
+    }
 }

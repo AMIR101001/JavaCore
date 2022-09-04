@@ -1,5 +1,7 @@
 package Auto;
 
+import java.util.Objects;
+
 public class Auto {
 
     private String model;
@@ -15,6 +17,19 @@ public class Auto {
     }
 
     public Auto() {
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Auto auto = (Auto) o;
+        return passengers == auto.passengers && model.equals(auto.model) && brand.equals(auto.brand) && Transmission.equals(auto.Transmission);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(model, brand, passengers, Transmission);
     }
 
     public String getModel() {

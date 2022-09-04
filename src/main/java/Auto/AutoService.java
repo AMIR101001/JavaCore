@@ -76,17 +76,17 @@ public class AutoService {
         return "AutoService{}";
     }
 
-    public Auto[] getAutosByModel(Auto[] autos, String model) {
+    public Auto[] getAutosByBrand(Auto[] autos, String brand) {
         int count = 0;
         for(Auto auto : autos){
-            if(auto.getModel().equals(model)){
+            if(auto.getBrand().equals(brand)){
                 count++;
             }
         }
         Auto[] desiredAuto = new Auto[count];
         count = 0;
         for(int i = 0; i < autos.length; i++){
-            if(autos[i].getModel().equals(model)){
+            if(autos[i].getBrand().equals(brand)){
                 desiredAuto[count] = autos[i];
                 count++;
             }
@@ -146,5 +146,17 @@ public class AutoService {
             }
         }
         return desiredAuto;
+    }
+
+    public  boolean carComparisonBrand (Auto[] autos, String brand){
+        boolean returnable = false;
+        for(Auto auto : autos){
+            if(auto.getBrand().equals(brand))
+                returnable = true;
+            else {
+                return false;
+            }
+        }
+        return returnable;
     }
 }
