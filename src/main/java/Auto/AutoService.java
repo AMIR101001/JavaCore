@@ -13,15 +13,15 @@ public class AutoService {
                 count++;
             }
         }
-        Auto[] desired_auto = new Auto[count];
+        Auto[] desiredAuto = new Auto[count];
         count = 0;
         for(int i = 0; i < autos.length; i++){
             if(autos[i].getBrand().equals("BMW")){
-                desired_auto[count] = autos[i];
+                desiredAuto[count] = autos[i];
                 count++;
             }
         }
-        return desired_auto;
+        return desiredAuto;
     }
 
     /**
@@ -37,15 +37,15 @@ public class AutoService {
                 count++;
             }
         }
-        Auto[] desired_auto = new Auto[count];
+        Auto[] desiredAuto = new Auto[count];
         count = 0;
         for(int i = 0; i < autos.length; i++){
             if(autos[i].getPassengers() == 2){
-                desired_auto[count] = autos[i];
+                desiredAuto[count] = autos[i];
                 count++;
             }
         }
-        return desired_auto;
+        return desiredAuto;
     }
 
     /**
@@ -60,93 +60,103 @@ public class AutoService {
                 count++;
             }
         }
-        Auto[] desired_auto = new Auto[count];
+        Auto[] desiredAuto = new Auto[count];
         count = 0;
         for(int i = 0; i < autos.length; i++){
             if(autos[i].getTransmission().equals("avto")){
-                desired_auto[count] = autos[i];
+                desiredAuto[count] = autos[i];
                 count++;
             }
         }
-        return desired_auto;
+        return desiredAuto;
     }
 
     @Override
     public String toString() {
         return "AutoService{}";
     }
-    /*-----------------------------------------------------------------------------------------------------
-    _______________________________________________________________________________________________________*/
 
-    public Auto[] get_all_model(Auto[] autos, String model) {
+    public Auto[] getAutosByBrand(Auto[] autos, String brand) {
         int count = 0;
         for(Auto auto : autos){
-            if(auto.getModel().equals(model)){
+            if(auto.getBrand().equals(brand)){
                 count++;
             }
         }
-        Auto[] desired_auto = new Auto[count];
+        Auto[] desiredAuto = new Auto[count];
         count = 0;
         for(int i = 0; i < autos.length; i++){
-            if(autos[i].getModel().equals(model)){
-                desired_auto[count] = autos[i];
+            if(autos[i].getBrand().equals(brand)){
+                desiredAuto[count] = autos[i];
                 count++;
             }
         }
-        return desired_auto;
+        return desiredAuto;
     }
 
-    public Auto[] get_all_model_marc(Auto[] autos, String model, String marc) {
+    public Auto[] getAutosByModelMake(Auto[] autos, String model, String marc) {
         int count = 0;
         for(Auto auto : autos){
             if(auto.getModel().equals(model)){
                 count++;
             }
         }
-        Auto[] desired_auto = new Auto[count];
+        Auto[] desireAuto = new Auto[count];
         count = 0;
         for(int i = 0; i < autos.length; i++){
             if(autos[i].getModel().equals(model) && autos[i].getModel().equals(marc)){
-                desired_auto[count] = autos[i];
+                desireAuto[count] = autos[i];
                 count++;
             }
         }
-        return desired_auto;
+        return desireAuto;
     }
 
-    public Auto[] get_all_passengers(Auto[] autos, int passengers) {
+    public Auto[] getAutosByPassengers(Auto[] autos, int passengers) {
         int count = 0;
         for(Auto auto : autos){
             if(auto.getPassengers() == passengers){
                 count++;
             }
         }
-        Auto[] desired_auto = new Auto[count];
+        Auto[] desiredAuto = new Auto[count];
         count = 0;
         for(int i = 0; i < autos.length; i++){
             if(autos[i].getPassengers() == passengers){
-                desired_auto[count] = autos[i];
+                desiredAuto[count] = autos[i];
                 count++;
             }
         }
-        return desired_auto;
+        return desiredAuto;
     }
 
-    public Auto[] get_all_Transmission(Auto[] autos, String Transmission) {
+    public Auto[] getAutosByTransmission(Auto[] autos, String Transmission) {
         int count = 0;
         for(Auto auto : autos){
             if(auto.getModel().equals(Transmission)){
                 count++;
             }
         }
-        Auto[] desired_auto = new Auto[count];
+        Auto[] desiredAuto = new Auto[count];
         count = 0;
         for(int i = 0; i < autos.length; i++){
             if(autos[i].getModel().equals(Transmission)){
-                desired_auto[count] = autos[i];
+                desiredAuto[count] = autos[i];
                 count++;
             }
         }
-        return desired_auto;
+        return desiredAuto;
+    }
+
+    public  boolean carComparisonBrand (Auto[] autos, String brand){
+        boolean returnable = false;
+        for(Auto auto : autos){
+            if(auto.getBrand().equals(brand))
+                returnable = true;
+            else {
+                return false;
+            }
+        }
+        return returnable;
     }
 }

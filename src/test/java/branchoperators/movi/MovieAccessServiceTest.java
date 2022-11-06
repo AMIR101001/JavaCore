@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
 
 public class MovieAccessServiceTest {
     @Test
-    public void first_test(){
+    public void firstTest(){
         for(int i = -1; i <= 25; i++){
             System.out.println(i + " " + MovieAccessService.accessMovie(i));
             if(i >= 18 && i <= 21){

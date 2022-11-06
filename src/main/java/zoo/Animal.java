@@ -1,17 +1,17 @@
 package zoo;
 
 public class Animal {
-    private String animal;
+    private String named;
 
-    public Animal(String animal) {
-        this.animal = animal;
+    public Animal(String named) {
+        this.named = named;
     }
 
-    public String getAnimal() {
-        return animal;
+    public String getNamed() {
+        return named;
     }
 
-    public void setAnimal(String animal) {
-        this.animal = animal;
+    public void setNamed(String named) {
+        this.named = named;
     }
 }
