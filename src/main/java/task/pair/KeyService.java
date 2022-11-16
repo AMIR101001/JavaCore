@@ -23,19 +23,28 @@ public class KeyService {
     public BigInteger getHash(Pair pair) {
             StringBuilder builder = new StringBuilder();
             builder.append(pair.getFirstKey().replaceAll("[^0-9]", "")).append(pair.getSecondKey().replaceAll("[^0-9]", ""));
-            String string  = builder.toString();
-            //contains(string);
 
+            int characters = builder.length();
+            char[] symbols = new char[characters];
+
+            for(int i = 0; i < characters; i++){
+                symbols[i] = builder.charAt(i);
+            }
+
+            if(contains(symbols)) {
+            BigInteger doubleKey = new BigInteger(builder.toString());
+            return doubleKey;
+        }
         return null;
     }
 
-    private boolean contains(char element) {
-        for (char number : numbers) {
-            if (number == element) {
-                return true;
-            }
+    private boolean contains(char[] element) {
+
+        for (int i = 0; i < element.length; i++ ){
+            if(numbers[i] != element[i])
+                return false;
         }
-        return false;
+        return true;
     }
 }
 
