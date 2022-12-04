@@ -23,7 +23,7 @@ public class ArrayDetail {
     }
 
     public int getLastElement() {
-        return arr[1];
+        return arr[arr.length - 1];
     }
 
     public void setLastElement(int lastElement) {

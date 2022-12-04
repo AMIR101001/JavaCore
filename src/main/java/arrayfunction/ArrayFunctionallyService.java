@@ -9,6 +9,10 @@ public class ArrayFunctionallyService {
     }
 
     public int getSumNumbersBetweenIndex(int[] numbers, int start, int end) {
-        return 0;
+        int allSum = 0;
+        for( ; start <= end; start++){
+            allSum += numbers[start];
+        }
+        return allSum;
     }
 }
