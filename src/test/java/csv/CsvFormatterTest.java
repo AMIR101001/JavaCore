@@ -12,15 +12,16 @@ public class CsvFormatterTest {
         CsvFormatter csvFormatter = new CsvFormatter();
 
         Person[] expected = {
-                new Person("Polina", "Obromova"),
-                new Person("Vlad", "Morozov"),
-                new Person("Arina", "Belinskaya"),
                 new Person("Nikita", "Nesterenko"),
+                new Person("Arina", "Belinskaya"),
+                new Person("Vlad", "Morozov"),
+                new Person("Polina", "Obromova"),
         };
 
 
 
         Assert.assertArrayEquals(expected, csvFormatter.getPersonsFromCsvFile(csvText.getTextFromFile()));
+
     }
 
 }

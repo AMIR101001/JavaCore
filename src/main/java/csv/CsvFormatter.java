@@ -25,10 +25,10 @@ public class CsvFormatter {
                 final String[] secondOperation = firstOperation[j].split(DELIMITER_KEY_VALUE);
 
                 for(int b = 0; b < secondOperation.length; b++){
-                        if( j == 0 && b==1){
-                            name = secondOperation[secondOperation.length -1];
-                        } else if(j==1 && b == 1){
-                            person[i] = new Person(name, secondOperation[b]);
+                        if( j == 0 ){
+                            name = secondOperation[1];
+                        } else if( j == 1 ){
+                            person[i] = new Person(name, secondOperation[1]);
                         }
                 }
 
